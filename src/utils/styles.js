@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { Colors } from './colors'
 
-export const styles = StyleSheet.create ({    
+export const styles = StyleSheet.create ({ 
     container: {
         paddingTop: 150,
         flex: 1,
@@ -17,9 +17,4 @@ export const styles = StyleSheet.create ({
         color: Colors.LIGHT_GREEN,
         fontWeight: '700',
     },
-    stretch: {
-        width: 400,
-        height: 300,
-        margin: 40,
-    }
 });

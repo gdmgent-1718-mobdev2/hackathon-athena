@@ -3,4 +3,5 @@ export const Colors = {
   DARK_GREEN: '#36AB85',
   WHITE: '#fff',
   RED:'##F80303',
+  ICON_YELLOW: '#FFF82F',
 };

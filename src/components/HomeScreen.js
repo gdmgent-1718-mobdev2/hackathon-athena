@@ -1,11 +1,10 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Text, Button } from 'react-native-elements';
+import { Text } from 'react-native-elements';
 
 import { styles } from '../utils/styles';
-import { Streak } from '../components/Streak';
 
-export class HomeScreen extends React.Component {
+export class StreakTime extends React.Component {
     render(){
         return(
             <View style={styles.container}>

@@ -5,16 +5,13 @@ import { StackNavigator } from 'react-navigation';
 
 const RootStack = StackNavigator(
     {
-        Home: {
-            screen: HomeScreen,
-        },
-        Shop: {
-            screen: ShopScreen,
-        },
+        Home: { screen: HomeScreen },
+        Shop: { screen: ShopScreen, },
     },
     {
         initialRouteName: 'Home',
-    }
+        headerMode: 'none',
+    },
 );
 
 export default RootStack;
