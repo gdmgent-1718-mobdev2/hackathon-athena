@@ -1,16 +1,20 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Text, Button } from 'react-native-elements';
+import { Text, Button, Avatar } from 'react-native-elements';
+import { Colors } from '../utils/colors';
+import { SkinCard } from '../components/SkinCard';
 
 export class ShopScreen extends React.Component {
     render(){
         return(
             <View style={styles.tmpContainer}>
-                <Text h2>Shop Screen</Text>
-                <Button
-                    title="Go Back"
-                    onPress={() => this.props.navigation.goBack()}
-                />
+                <Text style={{ color:Colors.TEXT_GREEN, fontSize: 16, textAlign:'center' }}>Pimp uw plant</Text>
+                <SkinCard />
+                <SkinCard />
+                <SkinCard />
+                <SkinCard />
+                <SkinCard />
+                <SkinCard />
             </View>
         );
     }
@@ -18,8 +22,6 @@ export class ShopScreen extends React.Component {
 
 const styles = StyleSheet.create({
     tmpContainer: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+         marginTop: 50,
+    }
 })
