@@ -7,7 +7,7 @@ export class SkinCard extends React.Component {
      render(){
          return(
              <View style={styles.card}>
-                 <Avatar
+                <Avatar
                          large
                          overlayContainerStyle={{backgroundColor: 'white',
                          borderWidth: 1,
