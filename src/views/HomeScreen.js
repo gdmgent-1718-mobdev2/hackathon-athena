@@ -12,8 +12,12 @@ export class HomeScreen extends React.Component {
                 <Streak />
                 <Text h2>Test Screen</Text>
                 <Button
-                    title="Next Screen"
+                    title="Go to Shop"
                     onPress={() => this.props.navigation.navigate('Shop')}
+                />
+                <Button
+                    title="Go to Usage"
+                    onPress={() => this.props.navigation.navigate('Usage')}
                 />
             </View>
         );
