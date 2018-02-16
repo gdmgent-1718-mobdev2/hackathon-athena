@@ -12,17 +12,16 @@ import { styles } from '../utils/styles';
 export class BottomNav extends React.Component {
     render(){
         return(
-            <View>
-                <Button
-                icon={
-                    <Icon
-                    name='arrow-right'
-                    size={15}
-                    color='white'
-                    />
-                }
-                text='BUTTON WITH ICON'
-                />
+          <View style={styles.card}>
+          <Avatar
+               large
+               overlayContainerStyle={{     
+               backgroundImage: require('../assets/img/chart.svg'),
+               borderWidth: 1,
+               borderColor: Colors.TEXT_GREEN,
+          }}
+          
+     />
             </View>
         );
     }

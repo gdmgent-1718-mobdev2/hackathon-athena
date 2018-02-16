@@ -1,21 +1,27 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { Text, Button } from 'react-native-elements';
+import { Colors } from '../utils/colors';
+import { TopNav } from '../components/TopNav';
 
-import { styles } from '../utils/styles';
-import { Streak } from '../components/Streak';
 
-export class HomeScreen extends React.Component {
+export class OverviewScreen extends React.Component {
     render(){
         return(
-            <View style={styles.container}>
-                <Streak />
-                <Text h2>Test Screen</Text>
-                <Button
-                    title="Next Screen"
-                    onPress={() => this.props.navigation.navigate('Shop')}
-                />
-            </View>
-        );
-    }
+          <View style={styles.tmpContainer}>
+          <TopNav />
+              <Text style={{ color:Colors.TEXT_GREEN, fontSize: 16, textAlign:'center' }}>Uw verbruik tot heden</Text>
+              <Image style={styles.Image} source={require('../assets/img/Usage.png')} />
+          </View>
+      );
+  }
 }
+
+const styles = StyleSheet.create({
+  tmpContainer: {
+       marginTop: 50,
+  },
+  Image: {
+       marginTop: 50
+  }
+})
