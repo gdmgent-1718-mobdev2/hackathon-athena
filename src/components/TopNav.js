@@ -10,7 +10,7 @@ import { styles } from '../utils/styles';
 export class TopNav extends React.Component {
     render(){
         return(
-            <View onPress={() => this.props.navigation.navigate('Home')}>
+            <View onPress={() => this.props.navigation.navigate.goBack()}>
                 <Icon 
                 name="white-balance-sunny"
                 type="material-community"
