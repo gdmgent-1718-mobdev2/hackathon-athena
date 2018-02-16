@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Modal } from 'react-native';
+import { View, StyleSheet, Modal, TextInput } from 'react-native';
 import { Text, Button, Input } from 'react-native-elements';
 
-import { Color } from '../utils/colors';
 import { styles } from '../utils/styles';
+import { Streak } from '../components/Streak';
 
-export class ScanContent extends React.Component {
+export class ScanScreen extends React.Component {
     render(){
         return(
             <View style={styles.container}>

@@ -17,4 +17,7 @@ export const styles = StyleSheet.create ({
         color: Colors.LIGHT_GREEN,
         fontWeight: '700',
     },
+    Image: {
+         marginTop:35
+    }
 });
