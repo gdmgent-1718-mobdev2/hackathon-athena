@@ -1,0 +1,96 @@
+@font-face {
+    font-family: ProximaBold;
+    src: url(fonts/ProximaBold.otf);
+}
+
+@font-face {
+    font-family: ProximaExtraBold;
+    src: url(fonts/ProximaExtrabold.otf);
+}
+
+@font-face {
+    font-family: ProximaSemiBold;
+    src: url(fonts/ProximaSemibold.otf);
+}
+
+* { margin: 0; padding: 0; }
+body {
+    font-family: ProximaSemiBold;
+    background: url(images/bg.png) no-repeat center center;
+    background-size: cover;}
+
+.clear-fix {
+    clear: both;
+}
+
+.navigation { 
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navigation .nav {
+    margin: 30px 80px;
+}
+
+.navigation .nav img {
+    width: 100px;
+}
+
+.navigation .nav ul {
+    text-align: right;
+}
+
+.navigation .nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.navigation .nav ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 20px;
+}
+
+.navigation .nav ul li .last {
+    background:#A5E2D0;
+    padding: 10px;
+    color: #36AB85;
+    border-radius: 5px;
+}
+
+.introduction {
+    margin: 50px;
+}
+
+.introduction .left {
+    width: 46%;
+    padding: 20px;
+    float: left;
+}
+
+.introduction .left h2 {
+    font-family: ProximaExtraBold;
+    color: #A5E2D0;
+}
+
+.introduction .left p {
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.introduction .left img {
+    width: 150px;
+}
+
+.introduction .right {
+    float: left;
+    width: 46%;
+    padding: 20px;
+    text-align: center;
+}
+
+.introduction .right img {
+    height: 400px;
+}
