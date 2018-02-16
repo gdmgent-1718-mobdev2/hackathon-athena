@@ -4,8 +4,10 @@ import { Text, Button } from 'react-native-elements';
 
 import { styles } from '../utils/styles';
 import { Streak } from '../components/Streak';
+import { BottomNav } from '../components/BottomNav';
 
 export class HomeScreen extends React.Component {
+    
     render(){
         return(
             <View style={styles.container}>
@@ -16,8 +18,8 @@ export class HomeScreen extends React.Component {
                     title="Go to Shop"
                     onPress={() => this.props.navigation.navigate('Shop')}
                 />
-                <Button
-                 style={{marginTop:20}}
+                <Button 
+                    style={{marginTop:20}}
                     title="Go to Overview"
                     onPress={() => this.props.navigation.navigate('Overview')}
                 />
