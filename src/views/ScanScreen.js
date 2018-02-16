@@ -1,19 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Text, Button, Modal, TextInput } from 'react-native-elements';
 
-import { Color } from '../utils/colors';
 import { styles } from '../utils/styles';
+import { Streak } from '../components/Streak';
 
-export class Scan extends React.Component {
-    state = { modalVisible: false, };
-    openModal() { this.setState({modalVisible:true});}
-    closeModal() { this.setState({modalVisible:false});}
-    constructor(props) {
-        super(props);
-        this.state = { text: 'Voer uw serial key in...'};
-    }
-
+export class ScanScreen extends React.Component {
     render(){
         return(
             <View style={styles.container}>
@@ -23,7 +15,6 @@ export class Scan extends React.Component {
                     title="Voer handmatig code in"
                     onPress={() => this.openModal()}
                 />
-
                 <Modal
                     visible={this.state.modalVisible}
                     animationType={'slide'}
