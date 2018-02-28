@@ -8,6 +8,9 @@ import { styles } from '../utils/styles';
 
 
 export class BottomNav extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render(){
         return(
             <View style={styles.buttons}>
@@ -29,8 +32,8 @@ export class BottomNav extends React.Component {
                 />
                 <Icon
                     style={styles.button}
-                    name='shop'
-                    type='entypo'
+                    name='md-pricetag'
+                    type='ionicon'
                     color='white'
                     size={36}
                     onPress={() => this.props.navigation.navigate('Shop')}
@@ -41,7 +44,7 @@ export class BottomNav extends React.Component {
                     type='ionicon'
                     color='white'
                     size={36}
-                    onPress={() => this.props.navigation.navigate('Shop')}
+                    onPress={() => this.props.navigation.navigate('Settings')}
                 />
             </View>
         );

@@ -17,7 +17,7 @@ export const styles = StyleSheet.create ({
     },
     Image: {
         position: 'absolute',
-        bottom: -25,
+        bottom: -50,
     },
     buttons: {
         flex: 1,
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create ({
         marginBottom: 16,
     },
     homeTitle: {
-        justifyContent: 'center',
+        alignItems: 'center',
     },
     streak: {
         flexDirection: 'row',
