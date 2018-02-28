@@ -8,7 +8,7 @@ export class StreakTime extends React.Component {
     render() {
         return(
             <View>
-                <Text h5>1 Dag 12 Uur</Text>
+                <Text h5 style={{fontWeight: '900', color: 'white', padding: 10}}>1 DAG 12 UUR</Text>
             </View>
         );
     }

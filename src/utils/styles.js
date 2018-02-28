@@ -3,11 +3,9 @@ import { Colors } from './colors'
 
 export const styles = StyleSheet.create ({ 
     container: {
-        paddingTop: 150,
         flex: 1,
+        padding: 16,
         backgroundColor: Colors.DARK_GREEN,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
     },
     title: {
         color: 'white',
@@ -18,6 +16,23 @@ export const styles = StyleSheet.create ({
         fontWeight: '700',
     },
     Image: {
-         marginTop:35
-    }
+        position: 'absolute',
+        bottom: -25,
+    },
+    buttons: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'flex-end',
+        marginBottom: 16,
+    },
+    homeTitle: {
+        justifyContent: 'center',
+    },
+    streak: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 10
+    },
 });

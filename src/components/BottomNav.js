@@ -1,8 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Text, Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
+import { View, StyleSheet } from 'react-native';
+import { Text, Icon } from 'react-native-elements';
 
 import { Colors } from '../utils/colors';
 import { styles } from '../utils/styles';
@@ -12,16 +10,39 @@ import { styles } from '../utils/styles';
 export class BottomNav extends React.Component {
     render(){
         return(
-          <View style={styles.card}>
-          <Avatar
-               large
-               overlayContainerStyle={{     
-               backgroundImage: require('../assets/img/chart.svg'),
-               borderWidth: 1,
-               borderColor: Colors.TEXT_GREEN,
-          }}
-          
-     />
+            <View style={styles.buttons}>
+                <Icon
+                    style={styles.button}
+                    name='graph-bar'
+                    type='foundation'
+                    color='white'
+                    size={36}
+                    onPress={() => this.props.navigation.navigate('Overview')}
+                />
+                <Icon
+                    style={styles.button}
+                    name='flower'
+                    type='material-community'
+                    color='white'
+                    size={36}
+                    onPress={() => this.props.navigation.navigate('Home')}
+                />
+                <Icon
+                    style={styles.button}
+                    name='shop'
+                    type='entypo'
+                    color='white'
+                    size={36}
+                    onPress={() => this.props.navigation.navigate('Shop')}
+                />
+                <Icon
+                    style={styles.button}
+                    name='md-settings'
+                    type='ionicon'
+                    color='white'
+                    size={36}
+                    onPress={() => this.props.navigation.navigate('Shop')}
+                />
             </View>
         );
     }

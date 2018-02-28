@@ -11,10 +11,11 @@ import { StreakTime } from './StreakTime';
 export class Streak extends React.Component {
     render(){
         return(
-            <View>
+            <View style={styles.streak}>
                 <Icon 
                     name="white-balance-sunny"
                     type="material-community"
+                    size={46}
                     color={Colors.ICON_YELLOW}
                 />
                 <StreakTime />
