@@ -35,4 +35,10 @@ export const styles = StyleSheet.create ({
         justifyContent: 'center',
         marginBottom: 10
     },
+    error_container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 16,
+    }
 });
