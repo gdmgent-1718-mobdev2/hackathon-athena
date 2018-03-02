@@ -28,7 +28,12 @@ export class CameraScanner extends React.Component {
                     <BarCodeScanner
                         onBarCodeRead = {this._handleBarCodeRead}
                         style={StyleSheet.absoluteFill}
-                    />
+                    >
+                        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', }}>
+                            <Text h2>PLANT</Text>
+                            <Text h1>SCAN BARCODE</Text>
+                        </View>
+                    </BarCodeScanner>
                 </View>
             );
         }

@@ -1,31 +1,27 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import {  Avatar } from 'react-native-elements';
+import { Avatar } from 'react-native-elements';
 import { Colors } from '../utils/colors';
 
 export class SkinCard extends React.Component {
      render(){
          return(
              <View style={styles.card}>
-                    <Avatar
-                         large
-                         overlayContainerStyle={{backgroundColor: 'white',
-                         borderWidth: 1,
-                         borderColor: Colors.TEXT_GREEN,
-                    }}
-               />
-               <Avatar
-                         large
-                         overlayContainerStyle={{backgroundColor: 'white', 
-                         borderWidth: 1,
-                         borderColor: Colors.TEXT_GREEN,}}
-               />
-               <Avatar
-                         large
-                         overlayContainerStyle={{backgroundColor: 'white', 
-                         borderWidth: 1,
-                         borderColor: Colors.TEXT_GREEN,}}
-               />
+                <Avatar 
+                    width={100}
+                    icon={{ name: 'home', color: 'orange' }}
+                    overlayContainerStyle={{ backgroundColor: '#F5F5F5' }}
+                />
+                <Avatar 
+                    width={100}
+                    icon={{ name: 'shop', color: 'orange' }}
+                    overlayContainerStyle={{ backgroundColor: '#F5F5F5' }}
+                />
+                <Avatar 
+                    width={100}
+                    icon={{ name: 'settings', color: 'orange' }}
+                    overlayContainerStyle={{ backgroundColor: '#F5F5F5'}}
+                />
              </View>
          );
      }
@@ -33,9 +29,8 @@ export class SkinCard extends React.Component {
  const styles = StyleSheet.create({
      card: {
           marginTop: 20,
-          width:'70%',
-          marginLeft:'15%',
           flexDirection:'row',
-          justifyContent: 'space-between',
+          alignItems: 'center',
+          justifyContent: 'center'
      }
  })

@@ -1,28 +1,26 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Text, Button, Avatar } from 'react-native-elements';
+import { ScrollView, StyleSheet } from 'react-native';
+import { Text } from 'react-native-elements';
 import { Colors } from '../utils/colors';
 import { SkinCard } from '../components/SkinCard';
-import { TopNav } from '../components/TopNav';
+
+import { styles } from '../utils/styles';
 
 export class ShopScreen extends React.Component {
     render(){
         return(
-            <View style={styles.tmpContainer}>
-                <Text style={{ color:Colors.TEXT_GREEN, fontSize: 16, textAlign:'center' }}>Pimp uw plant</Text>
+            <ScrollView style={{
+                flex: 1,
+                padding: 16,
+            }}>
+                <Text h3 style={{ textAlign: 'center', marginTop: 20, }}>Pimp uw Plant</Text>
                 <SkinCard />
                 <SkinCard />
                 <SkinCard />
                 <SkinCard />
                 <SkinCard />
                 <SkinCard />
-            </View>
+            </ScrollView>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    tmpContainer: {
-         marginTop: 50,
-    }
-})

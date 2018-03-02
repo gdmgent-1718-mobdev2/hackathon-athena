@@ -14,7 +14,7 @@ const RootStack = StackNavigator(
         Scan: { screen: ScanScreen }
     },
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'Shop',
         headerMode: 'none',
     },
 );
