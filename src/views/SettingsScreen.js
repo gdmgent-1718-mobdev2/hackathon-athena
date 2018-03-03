@@ -1,20 +1,40 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Text, Button } from 'react-native-elements';
+import { Text, List, ListItem } from 'react-native-elements';
 
 import { styles } from '../utils/styles';
-import { Streak } from '../components/Streak';
 
-export class HomeScreen extends React.Component {
+export class SettingsScreen extends React.Component {
     render(){
+        const list = [
+            {
+                title: 'Hernoem plant',
+                icon: 'flash-on'
+            },
+            {
+                title: 'Limiet herstellen',
+                icon: 'flight-takeoff'
+            },
+            {
+                title: 'Ontkoppel plant',
+                icon: 'local-car-wash',
+            }
+        ]
+
         return(
-            <View style={styles.container}>
-                <Streak />
-                <Text h2>Test Screen</Text>
-                <Button
-                    title="Next Screen"
-                    onPress={() => this.props.navigation.navigate('Shop')}
-                />
+            <View style={{ flex: 1 }}>
+                <Text h2>Test</Text>
+                <List>
+                {
+                    list.map((item, i) => (
+                    <ListItem
+                        key={i}
+                        title={item.title}
+                        leftIcon={{name: item.icon}}
+                    />
+                    ))
+                }
+                </List>
             </View>
         );
     }
