@@ -14,7 +14,7 @@ const RootStack = StackNavigator(
         Shop: { screen: ShopScreen },
         Overview: { screen: OverviewScreen },
         Scan: { screen: ScanScreen },
-        Settings: { screen: SettingsScreen },
+        Settings: { screen: SettingScreen },
         Load: { screen: LoadScreen }
     },
     {
