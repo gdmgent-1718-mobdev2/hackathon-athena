@@ -18,7 +18,7 @@ const RootStack = StackNavigator(
         Load: { screen: LoadScreen }
     },
     {
-        initialRouteName: 'Load',
+        initialRouteName: 'Home',
         headerMode: 'none',
     },
 );
