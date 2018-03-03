@@ -7,6 +7,7 @@ import { OverviewScreen } from '../views/OverviewScreen';
 import { ScanScreen } from '../views/ScanScreen';
 import { SettingsScreen } from '../views/SettingsScreen';
 import { LoadScreen } from '../views/LoadScreen';
+import { LimitScreen } from '../views/LimitScreen';
 
 const RootStack = StackNavigator(
     {
@@ -15,7 +16,8 @@ const RootStack = StackNavigator(
         Overview: { screen: OverviewScreen },
         Scan: { screen: ScanScreen },
         Settings: { screen: SettingsScreen },
-        Load: { screen: LoadScreen }
+        Load: { screen: LoadScreen },
+        Limit: { screen: LimitScreen }
     },
     {
         initialRouteName: 'Home',
