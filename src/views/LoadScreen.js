@@ -36,7 +36,6 @@ export class LoadScreen  extends React.Component {
                     // tips.map((tip, i) => (
                     //     <Text h4 key={i}>{tip.text}</Text>
                     // ))
-                    <Text h4>{tips[2]}</Text>
                 }
             </View>
         );
