@@ -7,6 +7,12 @@ export const styles = StyleSheet.create ({
         padding: 16,
         backgroundColor: Colors.DARK_GREEN,
     },
+    containerflex: {
+        flex: 1,
+        padding: 0,
+        backgroundColor: Colors.DARK_WHITE,
+
+    },
     title: {
         color: 'white',
         fontWeight: '900',
