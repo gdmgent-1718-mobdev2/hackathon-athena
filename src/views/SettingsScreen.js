@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Text, List, ListItem, Overlay } from 'react-native-elements';
+import { View, StyleSheet, Modal, TouchableHighlight } from 'react-native';
+import { Text, List, ListItem, FormInput } from 'react-native-elements';
 
 import { styles } from '../utils/styles';
 import { BottomNav } from '../components/BottomNav';
@@ -35,16 +35,36 @@ export class SettingsScreen extends React.Component {
             <View style={{ flex: 1 }}>
 
 
+<Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.modalVisible}
+          onRequestClose={() => {
+            alert('Modal has been closed.');
+          }}>
+          <View style={{marginTop: 22}}>
+            <View>
+            
+            <FormInput
+                placeholder="Hernoem uw plant"
+                />
 
-<Overlay
-  isVisible={this.state.modalVisible}
-  windowBackgroundColor="rgba(255, 255, 255, .5)"
-  overlayBackgroundColor="red"
-  width="auto"
-  height="auto"
->
-  <Text>Hello from Overlay!</Text>
-</Overlay>
+              <TouchableHighlight
+                onPress={() => {
+                  this.setModalVisible(!this.state.modalVisible);
+                }}>
+                <Text>Sluiten</Text>
+              </TouchableHighlight>
+
+              <TouchableHighlight
+                onPress={() => {
+                  this.setModalVisible(!this.state.modalVisible);
+                }}>
+                <Text>Verder gaan</Text>
+              </TouchableHighlight>
+            </View>
+          </View>
+        </Modal>
 
 
                 <Text h2>Test</Text>
