@@ -20,7 +20,7 @@ const RootStack = StackNavigator(
         Limit: { screen: LimitScreen }
     },
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'Home', // Change to current screen you're working on for testing purposes
         headerMode: 'none',
     },
 );

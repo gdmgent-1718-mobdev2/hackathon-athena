@@ -43,7 +43,7 @@ export class SettingsScreen extends React.Component {
 
 <Modal 
     isVisible={this.state.modalVisible}
-    onBackdropPress={() => this.setModalVisible(!this.state.modalVisible)}
+    onBackdropPress={() => this.setModalVisible(false)}
     >
     <View style={styles.popup}>     
         <FormInput style={{ width: '50%'}}
