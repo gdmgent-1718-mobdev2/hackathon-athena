@@ -46,5 +46,11 @@ export const styles = StyleSheet.create ({
         alignItems: 'center',
         justifyContent: 'center',
         padding: 16,
+    },
+    tip: {
+        margin: 30, 
+        fontWeight: '900',
+        textAlign: 'center',
+        color: Colors.LIGHT_GREEN,
     }
 });
