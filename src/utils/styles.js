@@ -52,5 +52,20 @@ export const styles = StyleSheet.create ({
         fontWeight: '900',
         textAlign: 'center',
         color: Colors.LIGHT_GREEN,
+    },
+    popup: {
+        flex: 1,
+        marginTop: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    popupForm: {
+        alignItems: 'center',
+        color: Colors.BLACK,
+    },
+    popupButton: {
+        marginTop: 50,
+        padding: 10,
+        borderColor: Colors.RED,
     }
 });

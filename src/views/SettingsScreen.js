@@ -41,27 +41,27 @@ export class SettingsScreen extends React.Component {
 
 
 <Modal
-          animationType="slide"
+          animationType="fade"
           transparent={false}
           visible={this.state.modalVisible}
           onRequestClose={() => {
             alert('Modal has been closed.');
           }}>
-          <View style={{marginTop: 22}}>
-            <View>
+          <View style={{marginTop: 80}}>
+            <View style={styles.popup}>
             
-            <FormInput
+            <FormInput style={styles.popupForm}
                 placeholder="Hernoem uw plant"
                 />
 
-              <TouchableHighlight
+              <TouchableHighlight style={styles.popupButton}
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
                 <Text>Sluiten</Text>
               </TouchableHighlight>
 
-              <TouchableHighlight
+              <TouchableHighlight style={styles.popupButton}
                 onPress={() => {
                   this.setModalVisible(!this.state.modalVisible);
                 }}>
