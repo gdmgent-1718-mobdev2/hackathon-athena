@@ -46,7 +46,7 @@ export class SettingsScreen extends React.Component {
     onBackdropPress={() => this.setModalVisible(!this.state.modalVisible)}
     >
     <View style={styles.popup}>     
-        <FormInput
+        <FormInput style={{ width: '50%'}}
             placeholder="Hernoem uw plant"
         />
     </View>
