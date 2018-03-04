@@ -24,12 +24,7 @@ export class HomeScreen extends React.Component {
                                 BESPAARD
                             </Text>
                         </Text>
-                        <Button
-                                
-                                title="Limit"
-                                color="#841584"
-                                onPress={() => this.props.navigation.navigate('Limit')}
-/>
+
                     </View>    
                 </View>
                 

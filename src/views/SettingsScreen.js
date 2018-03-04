@@ -19,15 +19,18 @@ export class SettingsScreen extends React.Component {
         const list = [
             {
                 title: 'Hernoem plant',
-                icon: 'flash-on'
+                icon: 'flash-on',
+                press: 'this.setModalVisible'
             },
             {
                 title: 'Limiet herstellen',
-                icon: 'flight-takeoff'
+                icon: 'flight-takeoff',
+                press: 'this.setModalVisible'
             },
             {
                 title: 'Ontkoppel plant',
                 icon: 'local-car-wash',
+                press: 'this.setModalVisible'
             }
         ]
 
@@ -69,18 +72,27 @@ export class SettingsScreen extends React.Component {
 
                 <Text h2>Test</Text>
                 <List>
-                {
-                    list.map((item, i) => (
+
                     <ListItem
-                        key={i}
-                        title={item.title}
-                        leftIcon={{name: item.icon}}
+                        title='Hernoem Plant'
+                        leftIcon={{name: 'flash-on'}}
                         onPress={() => {
                             this.setModalVisible(!this.state.modalVisible);
                           }}
                     />
-                    ))
-                }
+
+                    <ListItem
+                        title='Limiet herstellen'
+                        leftIcon={{name: 'flight-takeoff'}}
+                        onPress={() => this.props.navigation.navigate('Limit')}
+                    />
+
+                    <ListItem
+                        title='Ontkoppel plant'
+                        leftIcon={{name: 'local-car-wash'}}
+                        onPress={() => this.props.navigation.navigate('Home')}
+                    />
+
                 </List>
                 <BottomNav navigation={this.props.navigation} />
             </View>
