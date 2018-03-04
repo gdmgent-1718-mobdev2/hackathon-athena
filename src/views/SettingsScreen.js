@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Modal, TouchableHighlight } from 'react-native';
+import { View, StyleSheet, Modal, TouchableHighlight, Alert } from 'react-native';
 import { Text, List, ListItem, FormInput } from 'react-native-elements';
 
 import { styles } from '../utils/styles';
@@ -33,6 +33,8 @@ export class SettingsScreen extends React.Component {
                 press: 'this.setModalVisible'
             }
         ]
+
+        
 
         return(
             <View style={{ flex: 1 }}>
@@ -70,6 +72,8 @@ export class SettingsScreen extends React.Component {
         </Modal>
 
 
+
+
                 <Text h2>Test</Text>
                 <List>
 
@@ -77,7 +81,7 @@ export class SettingsScreen extends React.Component {
                         title='Hernoem Plant'
                         leftIcon={{name: 'flash-on'}}
                         onPress={() => {
-                            this.setModalVisible(!this.state.modalVisible);
+                            this.setModalVisible(true);
                           }}
                     />
 
@@ -90,7 +94,17 @@ export class SettingsScreen extends React.Component {
                     <ListItem
                         title='Ontkoppel plant'
                         leftIcon={{name: 'local-car-wash'}}
-                        onPress={() => this.props.navigation.navigate('Home')}
+                        onPress={() => {
+                            Alert.alert(
+                                'Plant ontkoppelen',
+                                'Wilt u zeker uw plant ontkoppelen?',
+                                [
+                                  {text: 'Neen', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                                  {text: 'Ja', onPress: () => this.props.navigation.navigate('Home')},
+                                ],
+                                { cancelable: false }
+                              )
+                        }}
                     />
 
                 </List>
