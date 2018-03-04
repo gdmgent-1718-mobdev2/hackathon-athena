@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Modal, TouchableHighlight, Alert } from 'react-native';
+import { View, StyleSheet, TouchableHighlight, Alert } from 'react-native';
 import { Text, List, ListItem, FormInput } from 'react-native-elements';
+import  Modal  from 'react-native-modal';
 
 import { styles } from '../utils/styles';
 import { BottomNav } from '../components/BottomNav';
@@ -40,36 +41,16 @@ export class SettingsScreen extends React.Component {
             <View style={{ flex: 1 }}>
 
 
-<Modal
-          animationType="fade"
-          transparent={false}
-          visible={this.state.modalVisible}
-          onRequestClose={() => {
-            alert('Modal has been closed.');
-          }}>
-          <View style={{marginTop: 80}}>
-            <View style={styles.popup}>
-            
-            <FormInput style={styles.popupForm}
-                placeholder="Hernoem uw plant"
-                />
-
-              <TouchableHighlight style={styles.popupButton}
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
-                <Text>Sluiten</Text>
-              </TouchableHighlight>
-
-              <TouchableHighlight style={styles.popupButton}
-                onPress={() => {
-                  this.setModalVisible(!this.state.modalVisible);
-                }}>
-                <Text>Verder gaan</Text>
-              </TouchableHighlight>
-            </View>
-          </View>
-        </Modal>
+<Modal 
+    isVisible={this.state.modalVisible}
+    onBackdropPress={() => this.setModalVisible(!this.state.modalVisible)}
+    >
+    <View style={styles.popup}>     
+        <FormInput
+            placeholder="Hernoem uw plant"
+        />
+    </View>
+</Modal>
 
 
 

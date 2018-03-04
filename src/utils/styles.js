@@ -54,18 +54,10 @@ export const styles = StyleSheet.create ({
         color: Colors.LIGHT_GREEN,
     },
     popup: {
-        flex: 1,
-        marginTop: 100,
-        alignItems: 'center',
+        backgroundColor: Colors.WHITE,
+        padding: 22,
         justifyContent: 'center',
-    },
-    popupForm: {
         alignItems: 'center',
-        color: Colors.BLACK,
+        borderColor: Colors.LIGHT_GREEN,
     },
-    popupButton: {
-        marginTop: 50,
-        padding: 10,
-        borderColor: Colors.RED,
-    }
 });
