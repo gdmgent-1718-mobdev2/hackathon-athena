@@ -1,11 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text, View, Slider} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import { Slider } from 'react-native-elements'
 
 export default class Slider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 50,
+      value: 0,
     };
   }
 

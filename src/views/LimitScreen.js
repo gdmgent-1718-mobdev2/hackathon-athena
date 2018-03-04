@@ -11,9 +11,7 @@ export class LimitScreen extends React.Component {
         return(
             <ScrollView contentContainerStyle={styles.center}>
                 <Text style={{ color:Colors.TEXT_GREEN, fontSize: 16, textAlign:'center', marginTop:50, }}>Wijzig uw limieten</Text>
-                <Slider />
-                <Slider />
-                <Slider />
+                <Slider orientation="vertical"/><Text>Value: {this.state.value}</Text>
             </ScrollView>
         );
     }
