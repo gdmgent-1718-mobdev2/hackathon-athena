@@ -12,6 +12,13 @@ export const styles = StyleSheet.create ({
         padding: 0,
         backgroundColor: Colors.DARK_WHITE,
     },
+    containercenter: {
+        flex: 1,
+        padding: 0,
+        alignItems: 'center',
+        backgroundColor: Colors.DARK_WHITE,
+
+    },
     title: {
         color: 'white',
         fontWeight: '900',

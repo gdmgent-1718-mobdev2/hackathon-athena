@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView, Modal } from 'react-native';
 import { Text, Button, Avatar } from 'react-native-elements';
 import { Colors } from '../utils/colors';
 import { SkinCard } from '../components/SkinCard';

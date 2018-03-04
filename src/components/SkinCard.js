@@ -11,16 +11,19 @@ export class SkinCard extends React.Component {
                     <Avatar
                             large
                             overlayContainerStyle={{backgroundColor: '#fff',
+                            borderColor: Colors.TEXT_GREEN,
                         }}
                     />
                     <Avatar
                             large
                             overlayContainerStyle={{backgroundColor: '#fff',
+                            borderColor: Colors.TEXT_GREEN,
                         }}
                     />
                     <Avatar
                             large
                             overlayContainerStyle={{backgroundColor: '#fff',
+                            borderColor: Colors.TEXT_GREEN,
                         }}
                     />
                 </View>
