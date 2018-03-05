@@ -11,6 +11,7 @@ export class BottomNav extends React.Component {
     constructor(props) {
         super(props);
     }
+    
     render(){
         return(
             <View style={styles.buttons}>

@@ -66,4 +66,9 @@ export const styles = StyleSheet.create ({
         alignItems: 'center',
         borderColor: Colors.LIGHT_GREEN,
     },
+    card: {
+        marginTop: 20,
+        flexDirection:'row',
+        justifyContent: 'space-around',
+   }
 });

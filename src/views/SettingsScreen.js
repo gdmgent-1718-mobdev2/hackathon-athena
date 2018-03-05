@@ -7,87 +7,73 @@ import { styles } from '../utils/styles';
 import { BottomNav } from '../components/BottomNav';
 
 export class SettingsScreen extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            hasLoaded: false,
+            modalVisible: false,
+        }
+    }
 
-    state = {
-        modalVisible: false,
-      };
+    componentDidMount() {
+        this.setState({ hasLoaded: true })
+    }
     
-      setModalVisible(visible) {
+    setModalVisible(visible) {
         this.setState({modalVisible: visible});
-      }
+    }
 
     render(){
-        const list = [
-            {
-                title: 'Hernoem plant',
-                icon: 'flash-on',
-                press: 'this.setModalVisible'
-            },
-            {
-                title: 'Limiet herstellen',
-                icon: 'flight-takeoff',
-                press: 'this.setModalVisible'
-            },
-            {
-                title: 'Ontkoppel plant',
-                icon: 'local-car-wash',
-                press: 'this.setModalVisible'
-            }
-        ]
-
-        
-
         return(
-            <View style={{ flex: 1 }}>
-
-
-<Modal 
-    isVisible={this.state.modalVisible}
-    onBackdropPress={() => this.setModalVisible(false)}
-    >
-    <View style={styles.popup}>     
-        <FormInput style={{ width: '50%'}}
-            placeholder="Hernoem uw plant"
-        />
-    </View>
-</Modal>
-
-
-
-
-                <Text h2>Test</Text>
+            <View style={{ flex: 1, }}>
+                <Modal 
+                    isVisible={this.state.modalVisible}
+                    onBackdropPress={() => this.setModalVisible(false)}
+                    >
+                    <View style={styles.popup}>     
+                        <FormInput
+                            placeholder="Hernoem uw plant"
+                        />
+                    </View>
+                </Modal>
+                <Text h2 style={{marginTop: 50, marginLeft: 16}}>Instellingen</Text>
                 <List>
-
                     <ListItem
                         title='Hernoem Plant'
-                        leftIcon={{name: 'flash-on'}}
+                        leftIcon={{
+                            name: 'pencil',
+                            type: 'foundation'
+                        }}
                         onPress={() => {
                             this.setModalVisible(true);
                           }}
                     />
-
                     <ListItem
-                        title='Limiet herstellen'
-                        leftIcon={{name: 'flight-takeoff'}}
-                        onPress={() => this.props.navigation.navigate('Limit')}
+                        title='Limiet herinstellen'
+                        leftIcon={{
+                            name: 'graph-bar',
+                            type: 'foundation'
+                        }}
+                        onPress={() => this.props.navigation.navigate('Overview')}
                     />
-
                     <ListItem
                         title='Ontkoppel plant'
-                        leftIcon={{name: 'local-car-wash'}}
+                        leftIcon={{
+                            name: 'chain-broken',
+                            type: 'font-awesome'
+                        }}
                         onPress={() => {
                             Alert.alert(
                                 'Plant ontkoppelen',
-                                'Wilt u zeker uw plant ontkoppelen?',
+                                'Bent u zeker dat uw uw plant wilt ontkoppelen?',
                                 [
                                   {text: 'Neen', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-                                  {text: 'Ja', onPress: () => this.props.navigation.navigate('Home')},
+                                  {text: 'Ja', onPress: () => this.props.navigation.navigate('Scan')},
                                 ],
                                 { cancelable: false }
                               )
                         }}
                     />
-
                 </List>
                 <BottomNav navigation={this.props.navigation} />
             </View>

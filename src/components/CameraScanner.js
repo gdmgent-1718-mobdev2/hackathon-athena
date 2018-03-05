@@ -11,10 +11,15 @@ export class CameraScanner extends React.Component {
         alert(`Bar code with type ${type} and data ${data} has been scanned!`);
     }
 
+    storeDataInDatabase(data) {
+        const dbRef = firebase.database().ref();
+        dbRef.set(data);
+    }
+
     render() {
         return(
             <BarCodeScanner
-                onBarCodeRead = {this._handleBarCodeRead}
+                onBarCodeRead = {this.storeDataInDatabase}
                 style={StyleSheet.absoluteFill}
             >
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-start', }}>

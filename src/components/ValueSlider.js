@@ -1,8 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Slider } from 'react-native-elements'
 
-export default class Slider extends React.Component {
+export class ValueSlider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +24,6 @@ export default class Slider extends React.Component {
       <View style={styles.container}>
         <Text style={styles.text}>{String(value)}</Text>
         <Slider
-        
           step={1}
           maximumValue={100}
           onValueChange={this.change.bind(this)}
@@ -42,7 +41,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 50,
+    fontSize: 20,
     textAlign: 'center',
   },
 });
